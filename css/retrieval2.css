@@ -1,0 +1,948 @@
+@charset "UTF-8";
+
+.width {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 94px 28px 119px
+}
+
+/*------header start------*/
+#header {
+    width: 100px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: space-between;
+    height: 100%;
+    background: #2F393F;
+    z-index: 3;
+}
+
+#header a {
+    width: 100px;
+    height: 96px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+#header a img {
+    display: block;
+}
+
+#header a:nth-of-type(1) img {
+    width: 64px;
+}
+
+#header a:nth-of-type(2) img {
+    width: 24px;
+}
+
+#header a:nth-of-type(3) img {
+    width: 18px;
+}
+
+#header a.active {
+    background: #326581;
+}
+
+/*------header end------*/
+/*------main start------*/
+#main {
+    width: auto;
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    /*-----footer start--------*/
+    /*-----footer end*/
+}
+
+#main .nano {
+    height: 100vh;
+}
+
+#main .nano .nano-pane {
+    background: transparent;
+}
+
+#main .nano .nano-pane .nano-slider {
+    background: #326581;
+}
+
+#main .nano .nano-content {
+    height: 100vh;
+}
+
+#main .nano .nano-content .banner {
+    width: 100%;
+    height: 320px;
+    background: rgba(0, 0, 0, 0.33);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+}
+
+#main .nano .nano-content .banner h1 {
+    font-size: 27px;
+    margin-bottom: 10px;
+    font-family: 'FangZheng', 'microsoft yahei';
+    color: #fff;
+    margin-left: 20px;
+    position: relative;
+}
+
+#main .nano .nano-content .banner h1 span {
+    position: absolute;
+    left: -17px;
+}
+
+#main .nano .nano-content .banner p {
+    width: 352px;
+    font-family: 'apple', 'microsoft yahei';
+    color: #fff;
+    font-size: 12px;
+    margin-left: 21px;
+}
+
+#main .nano .nano-content .title {
+    position: static;
+}
+
+#main .nano .nano-content .main {
+    margin: 0 auto;
+    padding: 0 94px 28px 119px;
+    background: #F1F4F6;
+}
+
+#main .nano .nano-content .main .crumb {
+    height: 76px;
+    line-height: 76px;
+}
+
+#main .nano .nano-content .main .crumb ol {
+    display: flex;
+    flex-direction: row;
+    font-family: 'apple', 'microsoft yahei';
+    color: #737B81;
+    font-size: 14px;
+}
+
+#main .nano .nano-content .main .crumb ol a {
+    color: #737B81;
+}
+
+#main .nano .nano-content .main .crumb ol i {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background: url(../img/bread.png) no-repeat center / cover;
+}
+
+#main .nano .nano-content .main #result {
+    width: 100%;
+    margin-left: 7px;
+}
+
+#main .nano .nano-content .main #result ul {
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    padding: 15px 76px 39px 52px;
+}
+
+#main .nano .nano-content .main #result ul li {
+    width: 100%;
+}
+
+#main .nano .nano-content .main #result ul li h3 {
+    height: 75px;
+    line-height: 75px;
+    padding-left: 8px;
+    background: url("../img/border.png") no-repeat left;
+    background-size: 8px;
+    font-size: 18px;
+    font-family: 'apple', 'microsoft yahei';
+    color: #2B3033;
+}
+
+#main .nano .nano-content .main #result ul li > div {
+    padding-left: 21px;
+    height: 62px;
+    background: #F5F7F9;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-family: 'apple', 'microsoft yahei';
+    font-size: 14px;
+    color: #2B3033;
+}
+
+#main .nano .nano-content .main #result ul li .describe {
+    height: auto;
+    padding: 21px;
+    font-size: 12px;
+}
+
+#main .nano .nano-content .main #result ul li .text {
+    background: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#main .nano .nano-content .main #result ul li .text p {
+    width: 676px;
+    height: 50px;
+    background: url(../img/border-big.png) no-repeat;
+    background-size: contain;
+    line-height: 50px;
+    text-align: center;
+}
+
+#main .nano .nano-content .main #result ul li .text button {
+    width: 148px;
+    height: 50px;
+    margin-left: 21px;
+    background: url(../img/border-small.png) no-repeat;
+    background-size: contain;
+    line-height: 50px;
+    text-align: center;
+    color: #2B3033;
+}
+
+#main .nano .nano-content .main #result ul li .audio {
+    height: 64px;
+    background: #326581;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+    user-select: none;
+}
+
+#main .nano .nano-content .main #result ul li .audio > div {
+    display: flex;
+}
+
+#main .nano .nano-content .main #result ul li .audio .play,
+#main .nano .nano-content .main #result ul li .audio .pause {
+    position: absolute;
+    width: 11px;
+    left: 46px;
+    float: left;
+}
+
+#main .nano .nano-content .main #result ul li .audio .pause {
+    display: none;
+}
+
+#main .nano .nano-content .main #result ul li .audio time {
+    width: 35px;
+    margin-left: 71px;
+}
+
+#main .nano .nano-content .main #result ul li .audio .dur {
+    margin: 0;
+}
+
+#main .nano .nano-content .main #result ul li .audio p {
+    width: 100%;
+    float: left;
+    height: 4px;
+    background: #58798B;
+    position: relative;
+    margin-left: 15px;
+}
+
+#main .nano .nano-content .main #result ul li .audio p span {
+    display: inline-block;
+    background: #2F393F;
+    width: 0;
+    height: 4px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#main .nano .nano-content .main #result ul li .audio p span:after {
+    content: '';
+    width: 4px;
+    height: 8px;
+    background: #fff;
+    position: absolute;
+    top: -2px;
+    left: 100%;
+}
+
+#main .nano .nano-content .main #result ul li .audio .volume {
+    float: right;
+    margin-right: 46px;
+    margin-left: 15px;
+    width: 15px;
+}
+
+#main .nano .nano-content .main #result ul li .audio .volume img {
+    width: 15px;
+    height: 15px;
+}
+
+#main .nano .nano-content .main #result ul li .audio .audioVolume {
+    width: 150px;
+    height: 3px;
+    left: -9px;
+}
+
+#main .nano .nano-content .main #result ul li .audio .audioVolume span {
+    display: inline-block;
+    background: #2F393F;
+    width: 0;
+    height: 4px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#main .nano .nano-content .main #result ul li .audio p span:after {
+    content: '';
+    width: 4px;
+    height: 8px;
+    background: #fff;
+    position: absolute;
+    top: -2px;
+    left: 100%;
+}
+
+#main .nano .nano-content .main #result ul li .video .videoVolume {
+    width: 150px;
+    height: 3px;
+    left: -9px;
+    background: #58798B;
+    position: relative;
+}
+
+#main .nano .nano-content .main #result ul li .video .videoVolume span {
+    display: inline-block;
+    background: #2F393F;
+    width: 0;
+    height: 4px;
+    position: absolute;
+}
+
+#main .nano .nano-content .main #result ul li .video .videoVolume span:after {
+    content: '';
+    width: 4px;
+    height: 8px;
+    background: #fff;
+    position: absolute;
+    top: -2px;
+    left: 100%;
+}
+
+#main .nano .nano-content .main #result ul li .image {
+    width: 100%;
+    height: 569px;
+    padding: 0;
+    overflow: hidden;
+    position: relative;
+}
+
+#main .nano .nano-content .main #result ul li .image img {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+#main .nano .nano-content .main #result ul li .image .imgList {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
+
+#main .nano .nano-content .main #result ul li .image .indexList {
+    height: 24px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    flex-direction: row;
+    padding: 0;
+    background: transparent;
+    text-align: center;
+}
+
+#main .nano .nano-content .main #result ul li .image .indexList li {
+    width: 9px;
+    height: 9px;
+    background: #fff;
+    margin: 0 4px;
+    cursor: pointer;
+}
+
+#main .nano .nano-content .main #result ul li .image .indexList li.active,
+#main .nano .nano-content .main #result ul li .image .indexList li:hover {
+    background: #006DB4;
+}
+
+#main .nano .nano-content .main #result ul li .image button {
+    width: 20px;
+    height: 20px;
+    border-left: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: transparent;
+    cursor: pointer;
+}
+
+#main .nano .nano-content .main #result ul li .image #prev {
+    left: 21px;
+    transform: rotate(45deg);
+}
+
+#main .nano .nano-content .main #result ul li .image #next {
+    right: 21px;
+    transform: rotate(-135deg);
+}
+
+#main .nano .nano-content .main #result ul li .video {
+    height: 462px;
+    overflow: hidden;
+    padding: 0;
+    position: relative;
+    cursor: pointer;
+}
+
+#main .nano .nano-content .main #result ul li .video .controls {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    height: 50px;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 100%);
+    display: flex;
+    align-items: center;
+}
+
+#main .nano .nano-content .main #result ul li .video .controls > div {
+    display: flex;
+    color: #fff;
+}
+
+#main .nano .nano-content .main #result ul li .video .controls .play,
+#main .nano .nano-content .main #result ul li .video .controls .pause {
+    position: absolute;
+    width: 11px;
+    left: 25px;
+    float: left;
+}
+
+#main .nano .nano-content .main #result ul li .video .controls .pause {
+    display: none;
+}
+
+#main .nano .nano-content .main #result ul li .video .controls time {
+    width: 40px;
+    margin-left: 50px;
+    color: #fff;
+}
+
+#main .nano .nano-content .main #result ul li .video .controls .dur {
+    margin: 0;
+}
+
+#main .nano .nano-content .main #result ul li .video .controls .progress {
+    width: 100%;
+    float: left;
+    height: 4px;
+    background: #58798B;
+    position: relative;
+    margin-left: 15px;
+}
+
+#main .nano .nano-content .main #result ul li .video .controls .progress span {
+    display: inline-block;
+    background: #2F393F;
+    width: 0;
+    height: 4px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#main .nano .nano-content .main #result ul li .video .controls .progress span:after {
+    content: '';
+    width: 4px;
+    height: 8px;
+    background: #fff;
+    position: absolute;
+    top: -2px;
+    left: 100%;
+}
+
+#main .nano .nano-content .main #result ul li .video .controls .volume {
+    float: right;
+    margin-right: 15px;
+    margin-left: 15px;
+    width: 15px;
+}
+
+#main .nano .nano-content .main #result ul li .video .controls .volume img {
+    width: 15px;
+    height: 15px;
+}
+
+#main .nano .nano-content .main #result ul li .video .controls .full {
+    float: right;
+    margin-right: 15px;
+    margin-left: 5px;
+    width: 15px;
+    color: #fff;
+}
+
+#main .nano .nano-content .main #result ul li .compose {
+    height: 462px;
+}
+
+#main .nano .nano-content .main #result ul li .figure {
+    height: auto;
+    padding: 15px 21px 21px;
+    font-family: 'apple', 'microsoft yahei';
+    color: #2B3033;
+}
+
+#main .nano .nano-content .main #result ul li .figure h4 {
+    font-size: 14px;
+    margin-bottom: 7px;
+    margin-top: 14px;
+}
+
+#main .nano .nano-content .main #result ul li .figure p {
+    font-size: 12px;
+    color: #4B5760;
+}
+
+#main .nano .nano-content .main #result ul li .copy p:nth-of-type(2) {
+    margin-left: 142px;
+}
+
+#main .footer {
+    height: 66px;
+    position: static;
+    transform: translate(0) rotate(0deg);
+    background: #2F393F;
+}
+
+#main .footer p {
+    line-height: 66px;
+    text-align: center;
+}
+
+/*------main end------*/
+@media screen and (min-width: 992px) and (max-width: 1280px) {
+    .width {
+        padding: 0 73px 22px 92px;
+    }
+
+    /*------header start------*/
+    #header {
+        width: 80px;
+    }
+
+    #header a {
+        height: 66px;
+    }
+
+    #header a img {
+        display: block;
+    }
+
+    #header a:nth-of-type(1) img {
+        width: 60%;
+    }
+
+    #header a:nth-of-type(2) img {
+        width: 24px;
+    }
+
+    #header a:nth-of-type(3) img {
+        width: 18px;
+    }
+
+    /*------header end------*/
+    /*------main start------*/
+    #main .nano .nano-content .banner {
+        width: 100%;
+        height: 248px;
+        background: rgba(0, 0, 0, 0.33);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        overflow: hidden;
+    }
+
+    #main .nano .nano-content .banner h1 {
+        font-size: 21px;
+        margin-bottom: 8px;
+        font-family: 'FangZheng', 'microsoft yahei';
+        color: #fff;
+        margin-left: 21px;
+    }
+
+    #main .nano .nano-content .banner p {
+        width: 273px;
+        font-size: 12px;
+        margin-left: 20px;
+    }
+
+    #main .nano .nano-content .main {
+        padding: 0 73px 22px 92px;
+    }
+
+    #main .nano .nano-content .main .crumb {
+        height: 59px;
+        line-height: 59px;
+    }
+
+    #main .nano .nano-content .main .crumb ol {
+        font-size: 12px;
+    }
+
+    #main .nano .nano-content .main #result ul {
+        padding: 11px 59px 39px 40px;
+    }
+
+    #main .nano .nano-content .main #result ul li h3 {
+        height: 53px;
+        line-height: 53px;
+        padding-left: 10px;
+        background-size: 6px;
+        font-size: 14px;
+    }
+
+    #main .nano .nano-content .main #result ul li > div {
+        padding-left: 17px;
+        height: 48px;
+        font-size: 12px;
+    }
+
+    #main .nano .nano-content .main #result ul li .describe {
+        height: auto;
+        padding: 17px;
+        font-size: 10px;
+    }
+
+    #main .nano .nano-content .main #result ul li .text {
+        height: 37px;
+        background: none;
+        padding-left: 0;
+    }
+
+    #main .nano .nano-content .main #result ul li .text p {
+        width: 524px;
+        height: 37px;
+        background-size: contain;
+        line-height: 37px;
+    }
+
+    #main .nano .nano-content .main #result ul li .text button {
+        width: 114px;
+        height: 37px;
+        margin-left: 17px;
+        background-size: contain;
+        line-height: 37px;
+    }
+
+    #main .nano .nano-content .main #result ul li .audio {
+        height: 50px;
+        background: #326581;
+    }
+
+    #main .nano .nano-content .main #result ul li .image {
+        height: 441px;
+    }
+
+    #main .nano .nano-content .main #result ul li .video {
+        height: 358px;
+    }
+
+    #main .nano .nano-content .main #result ul li .compose {
+        height: 358px;
+    }
+
+    #main .nano .nano-content .main #result ul li .figure {
+        height: auto;
+        padding: 12px 12px 13px;
+    }
+
+    #main .nano .nano-content .main #result ul li .figure h4 {
+        font-size: 12px;
+        margin-bottom: 5px;
+        margin-top: 11px;
+    }
+
+    #main .nano .nano-content .main #result ul li .figure p {
+        font-size: 12px;
+    }
+
+    #main .nano .nano-content .main #result ul li .copy p:nth-of-type(2) {
+        margin-left: 110px;
+    }
+
+    /*-----main end--------*/
+    /*-----footer start--------*/
+    .footer {
+        height: 51px;
+    }
+
+    .footer p {
+        line-height: 51px;
+        font-size: 12px;
+    }
+
+    /*-----footer end--------*/
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+    .width {
+        padding: 0 57px 17px 71px;
+    }
+
+    /*------header start------*/
+    #header {
+        width: 60px;
+    }
+
+    #header a {
+        height: 61px;
+    }
+
+    #header a:nth-of-type(1) img {
+        width: 80%;
+    }
+
+    /*------header end------*/
+    /*------main start------*/
+    #main .nano .nano-content .banner {
+        width: 100%;
+        height: 192px;
+    }
+
+    #main .nano .nano-content .banner h1 {
+        font-size: 16px;
+        margin-bottom: 6px;
+        margin-left: 22px;
+    }
+
+    #main .nano .nano-content .banner p {
+        width: 211px;
+        font-size: 12px;
+        margin-left: 23px;
+    }
+
+    #main .nano .nano-content .main {
+        padding: 0 57px 17px 71px;
+    }
+
+    #main .nano .nano-content .main .crumb {
+        height: 46px;
+        line-height: 46px;
+    }
+
+    #main .nano .nano-content .main .crumb ol {
+        font-size: 12px;
+    }
+
+    #main .nano .nano-content .main #result ul {
+        padding: 8px 46px 30px 31px;
+    }
+
+    #main .nano .nano-content .main #result ul li h3 {
+        height: 41px;
+        line-height: 41px;
+    }
+
+    #main .nano .nano-content .main #result ul li > div {
+        padding-left: 13px;
+        height: 37px;
+    }
+
+    #main .nano .nano-content .main #result ul li .describe {
+        height: auto;
+        padding: 13px;
+        font-size: 12px;
+    }
+
+    #main .nano .nano-content .main #result ul li .text {
+        height: 29px;
+        background: none;
+        padding-left: 0;
+    }
+
+    #main .nano .nano-content .main #result ul li .text p {
+        width: 405px;
+        height: 29px;
+        background-size: contain;
+        line-height: 29px;
+    }
+
+    #main .nano .nano-content .main #result ul li .text button {
+        width: 90px;
+        height: 29px;
+        background-size: contain;
+        line-height: 29px;
+    }
+
+    #main .nano .nano-content .main #result ul li .audio {
+        height: 38px;
+        background: #326581;
+    }
+
+    #main .nano .nano-content .main #result ul li .image {
+        height: 341px;
+    }
+
+    #main .nano .nano-content .main #result ul li .video {
+        height: 277px;
+    }
+
+    #main .nano .nano-content .main #result ul li .compose {
+        height: 277px;
+    }
+
+    #main .nano .nano-content .main #result ul li .figure {
+        height: auto;
+        padding: 9px 13px 8px;
+    }
+
+    #main .nano .nano-content .main #result ul li .figure h4 {
+        font-size: 12px;
+        margin-bottom: 4px;
+        margin-top: 9px;
+    }
+
+    #main .nano .nano-content .main #result ul li .figure p {
+        font-size: 12px;
+    }
+
+    #main .nano .nano-content .main #result ul li .copy p:nth-of-type(2) {
+        margin-left: 85px;
+    }
+
+    /*-----main end--------*/
+    /*-----footer start--------*/
+    .footer p {
+        line-height: 39px;
+        font-size: 12px;
+    }
+
+    /*-----footer end--------*/
+}
+
+@media screen and (max-width: 768px) {
+    #header a {
+        display: flex;
+        width: 100%;
+        height: 60px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #header a img {
+        width: 45px !important;
+    }
+
+    #header a i {
+        display: inline-block;
+        width: 28px;
+        height: 28px;
+        background: no-repeat center / cover;
+    }
+
+    #header a:nth-of-type(2) i {
+        background-image: url(../img/search.png);
+    }
+
+    #header a:last-of-type i {
+        background-size: contain;
+    }
+
+    #main .nano .nano-content .banner {
+        margin-top: 60px;
+        height: 192px;
+    }
+
+    #main .nano .nano-content .main {
+        padding: 0 10px 28px 10px;
+    }
+
+    .width {
+        padding: 0 10px 28px 10px;
+    }
+
+    #main .nano .nano-content .banner p {
+        width: 327px;
+    }
+
+    #main .nano .nano-content .main #result ul {
+        padding: 15px 20px 39px 20px;
+    }
+
+    #main .nano .nano-content .main #result ul li .text p {
+        width: 192px;
+        height: 15px;
+        line-height: 15px;
+    }
+
+    #main .nano .nano-content .main #result ul li .text button {
+        width: 44px;
+    }
+
+    #main .nano .nano-content .main #result ul li .audio .play, #main .nano .nano-content .main #result ul li .audio .pause {
+        left: 20px;
+    }
+
+    #main .nano .nano-content .main #result ul li .audio time {
+        width: 40px;
+        margin-left: 40px;
+    }
+
+    #main .nano .nano-content .main #result ul li .image {
+        height: 167px;
+    }
+
+    #main .nano .nano-content .main #result ul li .video, #main .nano .nano-content .main #result ul li .compose {
+        height: 135px;
+    }
+
+    #main .nano .nano-content .main #result ul li .text p {
+        width: 220px;
+        height: 30px;
+        background-size: 220px 30px;
+        line-height: 30px;
+    }
+
+    #main .nano .nano-content .main #result ul li .text button {
+        width: 50px;
+        height: 30px;
+        line-height: 30px;
+        background-size: 50px 30px;
+    }
+
+    #main .nano .nano-content .main #result ul li .copy p:nth-of-type(2) {
+        margin-left: 50px;
+    }
+
+    #main .nano .nano-content .main #result {
+        margin-left: 0;
+    }
+}

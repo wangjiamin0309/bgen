@@ -1,0 +1,1651 @@
+@charset "UTF-8";
+
+html,
+body {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    color: #fff;
+    font-family: 'apple', 'microsoft yahei';
+}
+
+input,
+a,
+button {
+    color: #fff;
+    cursor: pointer;
+}
+
+.border-left {
+    display: inline-block;
+    width: 15px;
+    height: 28px;
+    background: url(../img/border-left.png) no-repeat center / contain;
+}
+
+.border-right {
+    display: inline-block;
+    width: 15px;
+    height: 28px;
+    background: url(../img/border-right.png) no-repeat center / contain;
+}
+
+.border {
+    display: inline-block;
+    width: 15px;
+    height: 30px;
+    background: url(../img/border.png) no-repeat center / contain;
+}
+
+.none {
+    display: none;
+}
+
+.nano > .nano-pane {
+    background: #326581;
+}
+
+.nano > .nano-pane > .nano-slider {
+    background: #1C465C;
+    width: 3px;
+}
+
+/*------header start------*/
+#header {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: space-between;
+    width: 100px;
+    height: 100%;
+    background: #2F393F;
+    position: relative;
+    z-index: 3;
+}
+
+#header a {
+    display: flex;
+    width: 100%;
+    height: 96px;
+    justify-content: center;
+    align-items: center;
+}
+
+#header a img {
+    width: 64px;
+}
+
+#header a i {
+    display: inline-block;
+    width: 28px;
+    height: 28px;
+    background: no-repeat center / cover;
+}
+
+#header a:nth-of-type(2) i {
+    background-image: url(../img/search.png);
+}
+
+#header a:last-of-type i {
+    background: url(../img/login.png) 0.5px no-repeat;
+    background-size: contain;
+}
+
+#header a.active {
+    background: #326581;
+}
+
+/*------header end------*/
+/*------main start------*/
+#main {
+    width: 100%;
+    height: 100vh;
+    background: url("../img/bg.jpg") no-repeat center / cover;
+}
+
+#main .title {
+    position: absolute;
+    left: 226px;
+    bottom: 124px;
+    color: #fff;
+    font-weight: normal;
+}
+
+#main .title h1 {
+    font-size: 36px;
+    margin-top: 0;
+    margin-bottom: 16px;
+    font-family: 'FangZheng', 'microsoft yahei';
+    position: relative;
+}
+
+#main .title h1 span {
+    position: absolute;
+    left: -30px;
+}
+
+#main .title h2 {
+    font-size: 24px;
+    margin-top: 0;
+    margin-bottom: 4px;
+}
+
+#main .title p {
+    font-size: 16px;
+    margin: 0;
+}
+
+/*-----main end--------*/
+/*-----footer start--------*/
+.footer {
+    position: fixed;
+    right: 16px;
+    top: 50%;
+    -webkit-transform: translate(50%, -100%) rotate(90deg);
+    -moz-transform: translate(50%, -100%) rotate(90deg);
+    -ms-transform: translate(50%, -100%) rotate(90deg);
+    -o-transform: translate(50%, -100%) rotate(90deg);
+    transform: translate(50%, -100%) rotate(90deg);
+}
+
+.footer p {
+    color: #fff;
+    font-size: 12px;
+}
+
+/*-----footer end--------*/
+/*-----弹出框开始------*/
+#register,
+#enter,
+#protocol,
+#find,
+#search {
+    position: absolute;
+    width: 377px;
+    height: 100vh;
+    background: #326581;
+    top: 0;
+    left: -120%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+    z-index: 2;
+}
+
+#register.active,
+#enter.active,
+#protocol.active,
+#find.active,
+#search.active {
+    left: 100px;
+}
+
+#register [type="text"],
+#enter [type="text"],
+#protocol [type="text"],
+#find [type="text"],
+#search [type="text"] {
+    width: 292px;
+    padding-right: 0;
+}
+
+#register .nano-content,
+#enter .nano-content,
+#find .nano-content,
+#protocol .nano-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#register .reg-title,
+#enter .reg-title,
+#find .reg-title,
+#protocol .reg-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+    overflow: hidden;
+    margin: 0 auto 37px;
+}
+
+#register .reg-title img,
+#enter .reg-title img,
+#find .reg-title img,
+#protocol .reg-title img {
+    width: 15px;
+    display: block;
+}
+
+#register .reg-title h2,
+#enter .reg-title h2,
+#find .reg-title h2,
+#protocol .reg-title h2 {
+    font-size: 24px;
+    color: #fff;
+    margin: 4px;
+}
+
+#register form > div,
+#enter form > div,
+#find form > div,
+#protocol form > div {
+    width: 306px;
+    height: 43px;
+    margin: 0 auto 24px;
+    position: relative;
+}
+
+#register form > div button,
+#enter form > div button,
+#find form > div button,
+#protocol form > div button {
+    width: 83px;
+    height: 25px;
+    position: absolute;
+    right: 14px;
+    top: 9px;
+    background: #4E8DB0;
+}
+
+#register form > div small,
+#enter form > div small,
+#find form > div small,
+#protocol form > div small {
+    cursor: pointer;
+}
+
+#register form > div input,
+#enter form > div input,
+#find form > div input,
+#protocol form > div input {
+    width: 278px;
+    height: 19px;
+    background: #2E5E78;
+    padding: 12px 14px;
+}
+
+#register form > div input::-webkit-input-placeholder,
+#enter form > div input::-webkit-input-placeholder,
+#find form > div input::-webkit-input-placeholder,
+#protocol form > div input::-webkit-input-placeholder {
+    font-size: 16px;
+    color: #7DA6BD;
+}
+
+#register form > div input::-moz-placeholder,
+#enter form > div input::-moz-placeholder,
+#find form > div input::-moz-placeholder,
+#protocol form > div input::-moz-placeholder {
+    font-size: 16px;
+    color: #7DA6BD;
+}
+
+#register form > div input:-moz-placeholder,
+#enter form > div input:-moz-placeholder,
+#find form > div input:-moz-placeholder,
+#protocol form > div input:-moz-placeholder {
+    font-size: 16px;
+    color: #7DA6BD;
+}
+
+#register form > div input:-ms-input-placeholder,
+#enter form > div input:-ms-input-placeholder,
+#find form > div input:-ms-input-placeholder,
+#protocol form > div input:-ms-input-placeholder {
+    font-size: 16px;
+    color: #7DA6BD;
+}
+
+#register form > input,
+#enter form > input,
+#find form > input,
+#protocol form > input {
+    margin: 0 auto;
+}
+
+#register form .pass,
+#enter form .pass,
+#find form .pass,
+#protocol form .pass {
+    margin-bottom: 0;
+}
+
+#register form .check,
+#enter form .check,
+#find form .check,
+#protocol form .check {
+    display: flex;
+    align-items: center;
+    color: #fff;
+    font-size: 12px;
+    margin-bottom: 0;
+    cursor: pointer;
+}
+
+#register form .check input,
+#enter form .check input,
+#find form .check input,
+#protocol form .check input {
+    width: auto;
+}
+
+#register form input[type=submit],
+#enter form input[type=submit],
+#find form input[type=submit],
+#protocol form input[type=submit] {
+    width: 306px;
+    height: 43px;
+    background: #0071AF;
+    color: #fff;
+    font-size: 18px;
+}
+
+#register p,
+#enter p,
+#find p,
+#protocol p {
+    width: 306px;
+    text-align: right;
+    margin: 7px auto 0;
+    color: #fff;
+}
+
+#register p span,
+#enter p span,
+#find p span,
+#protocol p span {
+    cursor: pointer;
+}
+
+#enter p {
+    display: flex;
+    justify-content: space-between;
+}
+
+#protocol {
+    background: #fff;
+}
+
+#protocol .reg-title h2 {
+    color: #2B3033;
+    font-family: 'FangZheng', 'microsoft yahei';
+    font-size: 21px;
+}
+
+#protocol .back {
+    position: absolute;
+    top: 24px;
+    left: 16px;
+    color: #2E3437;
+}
+
+#protocol p {
+    width: 306px;
+    text-align: left;
+    font-size: 12px;
+    line-height: 20px;
+    color: #4B5760;
+    cursor: pointer;
+}
+
+#protocol p.proText {
+    cursor: default;
+}
+
+#protocol .check {
+    width: 306px;
+    color: #BEBEBE;
+    font-size: 12px;
+    margin: 7px auto 14px;
+}
+
+#protocol .check input {
+    vertical-align: middle;
+}
+
+#protocol button {
+    display: block;
+    width: 306px;
+    margin: 0 auto 36px;
+    height: 43px;
+    background: #0071AF;
+    color: #fff;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+#protocol button.disabled {
+    background: #D6D6D6;
+    color: #fff;
+}
+
+#search {
+    width: 228px;
+    height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    font-size: 16px;
+    color: #95B8CC;
+}
+
+#search .searchBox {
+    width: 100%;
+}
+
+#search .searchBox .nano-content {
+    padding: 0 0 0 16px;
+}
+
+#search .searchBox .nano-content .territory label {
+    margin-bottom: 7px;
+}
+
+#search .searchBox .nano-content .territory input {
+    width: 171px;
+    height: 23px;
+    background: #2E5E78;
+    color: #95B8CC;
+    padding: 10px 14px;
+    margin-bottom: 21px;
+}
+
+#search .searchBox .nano-content .searchTitle {
+    height: 26px;
+    margin: 32px 0 20px;
+    display: flex;
+    flex-direction: row;
+}
+
+#search .searchBox .nano-content .searchTitle h2 {
+    margin: 4px;
+    font-size: 18px;
+    font-family: 'FangZheng', 'microsoft yahei';
+    color: #fff;
+}
+
+#search .searchBox .nano-content form {
+    margin: 36px 0;
+    width: 100%;
+    height: 43px;
+    position: relative;
+}
+
+#search .searchBox .nano-content form input[type='search'] {
+    width: 199px;
+    height: 43px;
+    padding-left: 43px;
+    background: #2E5E78;
+}
+
+#search .searchBox .nano-content form input[type='submit'] {
+    width: 20px;
+    height: 20px;
+    background: url(../img/search-active.png) no-repeat left center / cover;
+    position: absolute;
+    left: 18px;
+    top: 14px;
+    cursor: pointer;
+}
+
+#search .searchBox .nano-content ul {
+    width: 100%;
+}
+
+#search .searchBox .nano-content ul li {
+    height: 58px;
+    line-height: 58px;
+    padding-left: 28px;
+    margin-left: -16px;
+    background: #326581;
+    color: #95B8CC;
+    cursor: pointer;
+}
+
+#search .searchBox .nano-content ul li.active,
+#search .searchBox .nano-content ul li:hover {
+    background: #2E5E78;
+}
+
+.list2 .nano > .nano-pane,
+.list3 .nano > .nano-pane,
+.list4 .nano > .nano-pane {
+    background: #2E5E78;
+}
+
+.list2,
+.list3,
+.list4 {
+    position: absolute;
+    top: 0;
+    z-index: 2;
+    width: 0;
+    height: 100%;
+    background: #2E5E78;
+    font-size: 18px;
+    color: #95B8CC;
+}
+
+.list2 li,
+.list3 li,
+.list4 li {
+    height: 53px;
+    padding-left: 28px;
+    line-height: 53px;
+    cursor: pointer;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.list2 li.active,
+.list3 li.active,
+.list4 li.active,
+.list2 li:hover,
+.list3 li:hover,
+.list4 li:hover {
+    background: #2A566D;
+}
+
+.list2 {
+    left: 328px;
+}
+
+.list3 {
+    left: 556px;
+}
+
+.list4 {
+    left: 784px;
+}
+
+/*-----弹出框结束------*/
+/* mask start */
+.mask {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.1);
+    z-index: 1;
+    overflow: hidden;
+}
+
+/* mask end */
+@media screen and (min-width: 992px) and (max-width: 1280px) {
+
+    /*------header start------*/
+    #header {
+        width: 80px;
+    }
+
+    #header a {
+        height: 80px;
+    }
+
+    #header a img {
+        width: 80%;
+    }
+
+    /*------header end------*/
+    /*------main start------*/
+    #main .title {
+        left: 150px;
+        bottom: 100px;
+    }
+
+    #main .title h1 {
+        font-size: 19px;
+        margin-bottom: 9px;
+    }
+
+    #main .title h1 span {
+        left: -17px;
+    }
+
+    #main .title h2 {
+        font-size: 13px;
+        margin-bottom: 2px;
+    }
+
+    #main .title p {
+        font-size: 12px;
+    }
+
+    /*-----main end--------*/
+    /*-----footer start--------*/
+    .footer {
+        right: 8px;
+    }
+
+    .footer p {
+        font-size: 12px;
+    }
+
+    /*-----footer end--------*/
+    /*-----弹出框开始--------*/
+    #register,
+    #enter,
+    #protocol,
+    #find,
+    #search {
+        width: 292px;
+    }
+
+    #register.active,
+    #enter.active,
+    #protocol.active,
+    #find.active,
+    #search.active {
+        left: 80px;
+    }
+
+    #register [type="text"],
+    #enter [type="text"],
+    #protocol [type="text"],
+    #find [type="text"],
+    #search [type="text"] {
+        width: 203px;
+        padding-right: 0;
+    }
+
+    #protocol .nano-content {
+        align-items: flex-start;
+    }
+
+    #register .reg-title,
+    #enter .reg-title,
+    #find .reg-title,
+    #protocol .reg-title {
+        height: 21px;
+        margin: 10px auto 21px;
+    }
+
+    #register .reg-title i,
+    #enter .reg-title i,
+    #find .reg-title i,
+    #protocol .reg-title i {
+        height: 20px;
+    }
+
+    #register .reg-title h2,
+    #enter .reg-title h2,
+    #find .reg-title h2,
+    #protocol .reg-title h2 {
+        font-size: 13px;
+        margin: 3px;
+    }
+
+    #register form > div,
+    #enter form > div,
+    #find form > div,
+    #protocol form > div {
+        width: 237px;
+        height: 33px;
+        margin-bottom: 17px;
+    }
+
+    #register form > div span,
+    #enter form > div span,
+    #find form > div span,
+    #protocol form > div span {
+        width: 50px;
+        height: 15px;
+        right: 9px;
+        top: 5px;
+    }
+
+    #register form > div button,
+    #enter form > div button,
+    #find form > div button,
+    #protocol form > div button {
+        width: 64px;
+        height: 19px;
+        font-size: 12px;
+        top: 5px;
+    }
+
+    #register form > div small,
+    #enter form > div small,
+    #find form > div small,
+    #protocol form > div small {
+        font-size: 10px;
+    }
+
+    #register form > div input,
+    #enter form > div input,
+    #find form > div input,
+    #protocol form > div input {
+        width: 203px;
+        height: 12px;
+        padding: 9px 17px;
+    }
+
+    #register form > div input::-webkit-input-placeholder,
+    #enter form > div input::-webkit-input-placeholder,
+    #find form > div input::-webkit-input-placeholder,
+    #protocol form > div input::-webkit-input-placeholder {
+        font-size: 12px;
+        color: #7DA6BD;
+    }
+
+    #register form > div input::-moz-placeholder,
+    #enter form > div input::-moz-placeholder,
+    #find form > div input::-moz-placeholder,
+    #protocol form > div input::-moz-placeholder {
+        font-size: 12px;
+        color: #7DA6BD;
+    }
+
+    #register form > div input:-moz-placeholder,
+    #enter form > div input:-moz-placeholder,
+    #find form > div input:-moz-placeholder,
+    #protocol form > div input:-moz-placeholder {
+        font-size: 12px;
+        color: #7DA6BD;
+    }
+
+    #register form > div input:-ms-input-placeholder,
+    #enter form > div input:-ms-input-placeholder,
+    #find form > div input:-ms-input-placeholder,
+    #protocol form > div input:-ms-input-placeholder {
+        font-size: 12px;
+        color: #7DA6BD;
+    }
+
+    #register form > div input[type="text"],
+    #enter form > div input[type="text"],
+    #find form > div input[type="text"],
+    #protocol form > div input[type="text"] {
+        padding-right: 17px;
+    }
+
+    #register form .check,
+    #enter form .check,
+    #find form .check,
+    #protocol form .check {
+        font-size: 10px;
+    }
+
+    #register form input[type=submit],
+    #enter form input[type=submit],
+    #find form input[type=submit],
+    #protocol form input[type=submit] {
+        width: 237px;
+        height: 33px;
+    }
+
+    #register form > input,
+    #enter form > input,
+    #find form > input,
+    #protocol form > input {
+        margin: 0 auto;
+    }
+
+    #register p,
+    #enter p,
+    #find p,
+    #protocol p {
+        width: 237px;
+        margin: 6px auto 0;
+        font-size: 12px;
+    }
+
+    #find .reg-title {
+        height: 21px;
+    }
+
+    #protocol .reg-title h2 {
+        font-size: 17px;
+    }
+
+    #protocol p {
+        width: 237px;
+        font-size: 10px;
+    }
+
+    #protocol .check {
+        width: 237px;
+        font-size: 10px;
+    }
+
+    #protocol button {
+        width: 237px;
+        height: 33px;
+    }
+
+    #search {
+        width: 176px;
+    }
+
+    #search .nano .nano-content .territory label {
+        font-size: 12px;
+        margin-bottom: 6px;
+    }
+
+    #search .nano .nano-content .territory input {
+        width: 132px;
+        height: 17px;
+        padding: 8px 11px;
+        margin-bottom: 17px;
+    }
+
+    #search .searchBox .nano-content {
+        padding: 0 0 0 9px;
+    }
+
+    #search .searchBox .nano-content .searchTitle {
+        height: 18px;
+        margin-bottom: 21px;
+    }
+
+    #search .searchBox .nano-content .searchTitle i {
+        height: 20px;
+    }
+
+    #search .searchBox .nano-content .searchTitle h2 {
+        margin: 2px;
+    }
+
+    #search .searchBox .nano-content form {
+        width: 100%;
+        height: 26px;
+        margin-bottom: 21px;
+    }
+
+    #search .searchBox .nano-content form input[type='search'] {
+        width: 154px;
+        height: 33px;
+        padding-left: 33px;
+    }
+
+    #search .searchBox .nano-content form input {
+        width: 104px;
+        height: 26px;
+        padding-left: 15px;
+        background: #2E5E78;
+    }
+
+    #search .searchBox .nano-content form input[type='submit'] {
+        top: 8px;
+        left: 10px;
+    }
+
+    #search .searchBox .nano-content .list {
+        width: 100%;
+    }
+
+    #search .searchBox .nano-content .list li {
+        height: 41px;
+        line-height: 41px;
+        padding-left: 21px;
+        margin-left: -9px;
+    }
+
+    #search .searchBox .nano-content .list li .list2,
+    #search .searchBox .nano-content .list li .list3 {
+        position: absolute;
+        top: 0;
+        display: none;
+        width: 176px;
+        height: 100vh;
+        color: #95B8CC;
+        background: #2E5E78;
+    }
+
+    .list2,
+    .list3,
+    .list4 {
+        background: #2E5E78;
+        font-size: 16px;
+    }
+
+    .list2 li,
+    .list3 li,
+    .list4 li {
+        height: 41px;
+        padding-left: 22px;
+        line-height: 41px;
+    }
+
+    .list2 {
+        left: 256px;
+    }
+
+    .list3 {
+        left: 432px;
+    }
+
+    .list4 {
+        left: 608px;
+    }
+
+    /*-----弹出框结束--------*/
+
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+
+    /*------header start------*/
+    #header {
+        width: 60px;
+    }
+
+    #header a {
+        height: 60px;
+    }
+
+    #header a img {
+        width: 80%;
+    }
+
+    /*------header end------*/
+    /*------main start------*/
+    #main .title {
+        left: 120px;
+        bottom: 77px;
+    }
+
+    #main .title h1 {
+        font-size: 19px;
+        margin-bottom: 9px;
+    }
+
+    #main .title h1 span {
+        left: -13px;
+    }
+
+    #main .title h2 {
+        font-size: 13px;
+        margin-bottom: 2px;
+    }
+
+    #main .title p {
+        font-size: 12px;
+    }
+
+    /*-----main end--------*/
+    /*-----footer start--------*/
+    .footer {
+        right: 8px;
+    }
+
+    .footer p {
+        font-size: 12px;
+    }
+
+    /*-----footer end--------*/
+    /*-----弹出框开始--------*/
+    #register,
+    #enter,
+    #protocol,
+    #find,
+    #search {
+        width: 226px;
+    }
+
+    #register.active,
+    #enter.active,
+    #protocol.active,
+    #find.active,
+    #search.active {
+        left: 60px;
+    }
+
+    #protocol .nano-content {
+        align-items: flex-start;
+    }
+
+    #register .reg-title,
+    #enter .reg-title,
+    #find .reg-title,
+    #protocol .reg-title {
+        height: 21px;
+        margin: 10px auto 21px;
+    }
+
+    #register .reg-title img,
+    #enter .reg-title img,
+    #find .reg-title img,
+    #protocol .reg-title img {
+        width: 8px;
+    }
+
+    #register .reg-title h2,
+    #enter .reg-title h2,
+    #find .reg-title h2,
+    #protocol .reg-title h2 {
+        font-size: 13px;
+        margin: 3px;
+    }
+
+    #register form > div,
+    #enter form > div,
+    #find form > div,
+    #protocol form > div {
+        width: 183px;
+        height: 26px;
+        margin-bottom: 13px;
+    }
+
+    #register form > div span,
+    #enter form > div span,
+    #find form > div span,
+    #protocol form > div span {
+        width: 50px;
+        height: 15px;
+        right: 9px;
+        top: 5px;
+    }
+
+    #register form > div button,
+    #enter form > div button,
+    #find form > div button,
+    #protocol form > div button {
+        width: 64px;
+        height: 19px;
+        font-size: 12px;
+        top: 5px;
+    }
+
+    #register form > div small,
+    #enter form > div small,
+    #find form > div small,
+    #protocol form > div small {
+        font-size: 10px;
+    }
+
+    #register form > div input,
+    #enter form > div input,
+    #find form > div input,
+    #protocol form > div input {
+        width: 169px;
+        height: 12px;
+        padding: 9px 7px;
+    }
+
+    #register form > div input::-webkit-input-placeholder,
+    #enter form > div input::-webkit-input-placeholder,
+    #find form > div input::-webkit-input-placeholder,
+    #protocol form > div input::-webkit-input-placeholder {
+        font-size: 12px;
+        color: #7DA6BD;
+    }
+
+    #register form > div input::-moz-placeholder,
+    #enter form > div input::-moz-placeholder,
+    #find form > div input::-moz-placeholder,
+    #protocol form > div input::-moz-placeholder {
+        font-size: 12px;
+        color: #7DA6BD;
+    }
+
+    #register form > div input:-moz-placeholder,
+    #enter form > div input:-moz-placeholder,
+    #find form > div input:-moz-placeholder,
+    #protocol form > div input:-moz-placeholder {
+        font-size: 12px;
+        color: #7DA6BD;
+    }
+
+    #register form > div input:-ms-input-placeholder,
+    #enter form > div input:-ms-input-placeholder,
+    #find form > div input:-ms-input-placeholder,
+    #protocol form > div input:-ms-input-placeholder {
+        font-size: 12px;
+        color: #7DA6BD;
+    }
+
+    #register form > div input[type="text"],
+    #enter form > div input[type="text"],
+    #find form > div input[type="text"],
+    #protocol form > div input[type="text"] {
+        width: 159px;
+        padding-right: 17px;
+    }
+
+    #register form .check,
+    #enter form .check,
+    #find form .check,
+    #protocol form .check {
+        font-size: 12px;
+    }
+
+    #register form input[type=submit],
+    #enter form input[type=submit],
+    #find form input[type=submit],
+    #protocol form input[type=submit] {
+        width: 183px;
+        height: 26px;
+        font-size: 12px;
+    }
+
+    #register form > input,
+    #enter form > input,
+    #find form > input,
+    #protocol form > input {
+        margin: 0 auto;
+    }
+
+    #register p,
+    #enter p,
+    #find p,
+    #protocol p {
+        width: 183px;
+        margin: 4px auto 0;
+        font-size: 12px;
+    }
+
+    #find .reg-title {
+        height: 21px;
+    }
+
+    #protocol .reg-title h2 {
+        font-size: 17px;
+    }
+
+    #protocol p {
+        width: 183px;
+        font-size: 12px;
+    }
+
+    #protocol .check {
+        width: 183px;
+        font-size: 12px;
+    }
+
+    #protocol button {
+        width: 183px;
+        height: 26px;
+    }
+
+    #search {
+        width: 137px;
+        font-size: 14px;
+    }
+
+    #search .searchBox .nano-content {
+        padding: 0 0 0 9px;
+    }
+
+    #search .searchBox .nano-content .territory label {
+        margin-bottom: 4px;
+    }
+
+    #search .searchBox .nano-content .territory input {
+        width: 101px;
+        height: 14px;
+        padding: 6px 9px;
+        margin-bottom: 13px;
+    }
+
+    #search .searchBox .nano-content .searchTitle {
+        height: 18px;
+        margin-bottom: 21px;
+    }
+
+    #search .searchBox .nano-content .searchTitle i {
+        height: 20px;
+    }
+
+    #search .searchBox .nano-content .searchTitle h2 {
+        margin: 2px;
+    }
+
+    #search .searchBox .nano-content form {
+        width: 100%;
+        height: 26px;
+        margin-bottom: 21px;
+    }
+
+    #search .searchBox .nano-content form input[type='search'] {
+        width: 119px;
+        height: 26px;
+        padding-left: 26px;
+    }
+
+    #search .searchBox .nano-content form input {
+        width: 104px;
+        height: 26px;
+        padding-left: 15px;
+        background: #2E5E78;
+    }
+
+    #search .searchBox .nano-content form input[type='submit'] {
+        top: 4px;
+        left: 10px;
+    }
+
+    #search .searchBox .nano-content .list {
+        width: 100%;
+    }
+
+    #search .searchBox .nano-content .list li {
+        height: 35px;
+        line-height: 35px;
+        padding-left: 17px;
+        margin-left: -9px;
+    }
+
+    .list2,
+    .list3,
+    .list4 {
+        background: #2E5E78;
+        font-size: 14px;
+    }
+
+    .list2 li,
+    .list3 li,
+    .list4 li {
+        height: 32px;
+        padding-left: 17px;
+        line-height: 32px;
+    }
+
+    .list2 {
+        left: 197px;
+    }
+
+    .list3 {
+        left: 334px;
+    }
+
+    .list4 {
+        left: 471px;
+    }
+
+    /*-----弹出框结束--------*/
+
+}
+
+@media screen and (max-width: 768px) {
+    /*------header start------*/
+    #header {
+        width: 100% !important;
+        height: 60px !important;
+        position: fixed;
+        top: 0;
+        left: 0;
+        flex-wrap: nowrap !important;
+    }
+
+    #header a {
+        height: 60px;
+    }
+
+    #header a img {
+        width: 45px;
+    }
+
+    /*------header end------*/
+    /*------main start------*/
+    #main .title {
+        left: 80px;
+        bottom: 77px;
+    }
+
+    #main .title h1 {
+        font-size: 19px;
+        margin-bottom: 9px;
+    }
+
+    #main .title h1 span {
+        left: -13px;
+    }
+
+    #main .title h2 {
+        font-size: 13px;
+        margin-bottom: 2px;
+    }
+
+    #main .title p {
+        font-size: 12px;
+    }
+
+    /*-----main end--------*/
+    /*-----footer start--------*/
+    .footer {
+        right: 8px;
+    }
+
+    .footer p {
+        font-size: 12px;
+    }
+
+    /*-----footer end--------*/
+    /*-----弹出框开始--------*/
+    #register,
+    #enter,
+    #protocol,
+    #find {
+        max-width: 377px;
+        top: 60px;
+    }
+
+    #search {
+        top: 60px;
+    }
+
+    #register .nano-content,
+    #enter .nano-content,
+    #protocol .nano-content,
+    #find .nano-content {
+        align-items: flex-start;
+    }
+
+    #register .nano-content > div,
+    #enter .nano-content > div,
+    #protocol .nano-content > div,
+    #find .nano-content > div {
+        margin: 70px auto;
+    }
+
+    #register.active,
+    #enter.active,
+    #protocol.active,
+    #find.active {
+        top: 60px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    #search.active {
+        top: 60px;
+        left: 0;
+    }
+
+    #protocol .nano-content {
+        align-items: flex-start;
+    }
+
+    #register .reg-title,
+    #enter .reg-title,
+    #find .reg-title,
+    #protocol .reg-title {
+        height: 21px;
+        margin: 10px auto 21px;
+    }
+
+    #register .reg-title img,
+    #enter .reg-title img,
+    #find .reg-title img,
+    #protocol .reg-title img {
+        width: 8px;
+    }
+
+    #register .reg-title h2,
+    #enter .reg-title h2,
+    #find .reg-title h2,
+    #protocol .reg-title h2 {
+        font-size: 13px;
+        margin: 3px;
+    }
+
+    #register form > div,
+    #enter form > div,
+    #find form > div,
+    #protocol form > div {
+        width: 233px;
+        height: 40px;
+        margin-bottom: 15px;
+    }
+
+    #register form > div span,
+    #enter form > div span,
+    #find form > div span,
+    #protocol form > div span {
+        width: 50px;
+        height: 15px;
+        right: 9px;
+        top: 5px;
+    }
+
+    #register form > div button,
+    #enter form > div button,
+    #find form > div button,
+    #protocol form > div button {
+        width: 64px;
+        height: 19px;
+        font-size: 12px;
+        top: 10px;
+    }
+
+    #register form > div small,
+    #enter form > div small,
+    #find form > div small,
+    #protocol form > div small {
+        font-size: 10px;
+    }
+
+    #register form > div input,
+    #enter form > div input,
+    #find form > div input,
+    #protocol form > div input {
+        width: 219px;
+        height: 22px;
+        padding: 9px 7px;
+    }
+
+    #register form > div input::-webkit-input-placeholder,
+    #enter form > div input::-webkit-input-placeholder,
+    #find form > div input::-webkit-input-placeholder,
+    #protocol form > div input::-webkit-input-placeholder {
+        font-size: 12px;
+        color: #7DA6BD;
+    }
+
+    #register form > div input::-moz-placeholder,
+    #enter form > div input::-moz-placeholder,
+    #find form > div input::-moz-placeholder,
+    #protocol form > div input::-moz-placeholder {
+        font-size: 12px;
+        color: #7DA6BD;
+    }
+
+    #register form > div input:-moz-placeholder,
+    #enter form > div input:-moz-placeholder,
+    #find form > div input:-moz-placeholder,
+    #protocol form > div input:-moz-placeholder {
+        font-size: 12px;
+        color: #7DA6BD;
+    }
+
+    #register form > div input:-ms-input-placeholder,
+    #enter form > div input:-ms-input-placeholder,
+    #find form > div input:-ms-input-placeholder,
+    #protocol form > div input:-ms-input-placeholder {
+        font-size: 12px;
+        color: #7DA6BD;
+    }
+
+    #register form > div input[type="text"],
+    #enter form > div input[type="text"],
+    #find form > div input[type="text"],
+    #protocol form > div input[type="text"] {
+        width: 209px;
+        padding-right: 17px;
+    }
+
+    #register form .check,
+    #enter form .check,
+    #find form .check,
+    #protocol form .check {
+        font-size: 12px;
+    }
+
+    #register form input[type=submit],
+    #enter form input[type=submit],
+    #find form input[type=submit],
+    #protocol form input[type=submit] {
+        width: 233px;
+        height: 40px;
+        font-size: 12px;
+    }
+
+    #register form > input,
+    #enter form > input,
+    #find form > input,
+    #protocol form > input {
+        margin: 0 auto;
+    }
+
+    #register p,
+    #enter p,
+    #find p,
+    #protocol p {
+        width: 233px;
+        margin: 10px auto 0;
+        font-size: 12px;
+    }
+
+    #find .reg-title {
+        height: 21px;
+    }
+
+    #protocol .reg-title h2 {
+        font-size: 17px;
+    }
+
+    #protocol p {
+        width: 80%;
+        font-size: 12px;
+    }
+
+    #protocol .check {
+        width: 80%;
+        font-size: 12px;
+    }
+
+    #protocol button {
+        width: 80%;
+        height: 26px;
+    }
+
+    #search {
+        width: 25%;
+        font-size: 14px;
+    }
+
+    #search .searchBox .nano-content {
+        padding: 0 0 0 9px;
+    }
+
+    #search .searchBox .nano-content .territory label {
+        margin-bottom: 4px;
+    }
+
+    #search .searchBox .nano-content .territory input {
+        width: 71%;
+        height: 14px;
+        padding: 6px 9px;
+        margin-bottom: 13px;
+    }
+
+    #search .searchBox .nano-content .searchTitle {
+        height: 18px;
+        margin-bottom: 21px;
+    }
+
+    #search .searchBox .nano-content .searchTitle i {
+        height: 20px;
+    }
+
+    #search .searchBox .nano-content .searchTitle h2 {
+        margin: 2px;
+    }
+
+    #search .searchBox .nano-content form {
+        width: 100%;
+        height: 26px;
+        margin-bottom: 21px;
+    }
+
+    #search .searchBox .nano-content form input[type='search'] {
+        width: 93%;
+        height: 26px;
+        padding-left: 30px;
+    }
+
+    #search .searchBox .nano-content form input {
+        width: 104px;
+        height: 26px;
+        padding-left: 15px;
+        background: #2E5E78;
+    }
+
+    #search .searchBox .nano-content form input[type='submit'] {
+        top: 10px;
+        left: 5px;
+    }
+
+    #search .searchBox .nano-content form input[type='submit'] {
+        width: 15px;
+        height: 15px;
+    }
+
+    #search .searchBox .nano-content .list {
+        width: 100%;
+    }
+
+    #search .searchBox .nano-content .list li {
+        height: 35px;
+        line-height: 35px;
+        padding-left: 17px;
+        margin-left: -9px;
+    }
+
+    #search .searchBox .nano-content .searchTitle h2 {
+        font-size: 12px;
+    }
+
+    .list2,
+    .list3,
+    .list4 {
+        top: 60px;
+        width: 0;
+        background: #2E5E78;
+        font-size: 14px;
+    }
+
+    .list2 li,
+    .list3 li,
+    .list4 li {
+        height: 32px;
+        padding-left: 15px;
+        line-height: 32px;
+    }
+
+    .list2 {
+        left: 25%;
+    }
+
+    .list3 {
+        left: 50%;
+    }
+
+    .list4 {
+        left: 75%;
+    }
+
+    label {
+        padding-top: 5px;
+    }
+
+    /*-----弹出框结束--------*/
+
+}
+
+@charset "UTF-8";
+
+@font-face {
+    font-family: 'FangZheng';
+    src: url("../font/方正仿宋_GBK.TTF");
+}
+
+@font-face {
+    font-family: 'apple';
+    src: url("../font/PingFang Light.ttf");
+}

@@ -1,0 +1,166 @@
+@charset "utf-8";
+
+/* CSS Document */
+html,
+body {
+	font-size: 14px;
+	font-family: 'FangZheng', 'apple', '微软雅黑';
+}
+
+@font-face {
+	font-family: 'FangZheng';
+	src: url("../font/方正仿宋_GBK.TTF");
+}
+
+@font-face {
+	font-family: 'apple';
+	src: url("../font/PingFang Light.ttf");
+}
+
+.clearfix:after {
+	content: "";
+	display: block;
+	clear: both;
+	height: 0;
+	overflow: hidden;
+}
+
+.pull-left {
+	float: left;
+}
+
+.pull-right {
+	float: right;
+}
+
+.ellipsis {
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+}
+
+html,
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+input,
+button,
+textarea,
+select,
+option,
+p,
+blockquote,
+th,
+td,
+figure,
+img {
+	margin: 0;
+	padding: 0;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+ul,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ol,
+article,
+aside,
+header,
+footer,
+figure,
+figcaption,
+form,
+label,
+fieldset,
+legend,
+iframe,
+frameset,
+frame {
+	display: block
+}
+
+fieldset,
+img {
+	border: 0;
+}
+
+li {
+	list-style: none;
+}
+
+caption,
+th {
+	text-align: left;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-size: 100%;
+	font-weight: normal;
+}
+
+input,
+button,
+textarea,
+select,
+optgroup,
+option {
+	font-family: inherit;
+	font-size: inherit;
+	font-style: inherit;
+	font-weight: inherit;
+}
+
+input,
+button,
+textarea,
+select {
+	*font-size: 100%;
+}
+
+input,
+button,
+select {
+	border: 0 none;
+	outline: 0 none;
+}
+
+a {
+	color: black;
+	outline: 0 none;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+a:hover {
+	text-decoration: none;
+}
